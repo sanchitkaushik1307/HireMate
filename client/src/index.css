@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base styles ─────────────────────────────── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #090B0E;
+  color: #F1F5F9;
+}
+
+/* ─── Auth layout ─────────────────────────────── */
+
+.auth-gradient {
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 30%, #4338CA 60%, #6366F1 100%);
+}
+
+.auth-pattern {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+}
+
+/* Floating orbs for the branding panel */
+.auth-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  animation: float 8s ease-in-out infinite;
+}
+
+.auth-orb-1 {
+  width: 200px;
+  height: 200px;
+  background: #818CF8;
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.auth-orb-2 {
+  width: 150px;
+  height: 150px;
+  background: #3B82F6;
+  bottom: 20%;
+  right: 15%;
+  animation-delay: -3s;
+}
+
+.auth-orb-3 {
+  width: 100px;
+  height: 100px;
+  background: #8B5CF6;
+  top: 60%;
+  left: 50%;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* ─── Form elements ───────────────────────────── */
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white
+    text-slate-900 placeholder-slate-400
+    transition-all duration-200 ease-out
+    focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500;
+}
+
+.input-field:hover:not(:focus) {
+  @apply border-slate-300;
+}
+
+.input-label {
+  @apply block text-sm font-medium text-slate-700 mb-1.5;
+}
+
+.btn-primary {
+  @apply w-full py-3 px-6 rounded-xl font-semibold text-white
+    bg-gradient-to-r from-brand-500 to-brand-600
+    transition-all duration-200 ease-out
+    hover:from-brand-600 hover:to-brand-700 hover:shadow-lg hover:shadow-brand-500/25
+    focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:ring-offset-2
+    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none;
+}
+
+.btn-google {
+  @apply w-full py-3 px-6 rounded-xl font-medium
+    bg-white border border-slate-200 text-slate-700
+    transition-all duration-200 ease-out
+    hover:bg-slate-50 hover:border-slate-300 hover:shadow-sm
+    focus:outline-none focus:ring-2 focus:ring-slate-200 focus:ring-offset-2
+    disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.divider {
+  @apply flex items-center gap-4 text-sm text-slate-400;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  @apply flex-1 h-px bg-slate-200;
+}
+
+/* ─── Utility ─────────────────────────────────── */
+
+.error-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* ─── HireMate Design System Custom Properties ─── */
+:root {
+  --hm-bg: #080D0F;
+  --hm-surface: #0E1518;
+  --hm-surface-elevated: #141D20;
+  --hm-surface-hover: #1A2528;
+  --hm-surface-active: #1F2E32;
+  --hm-fg: #F2F0E9;
+  --hm-fg-muted: #A0ADB0;
+  --hm-fg-subtle: #607074;
+  --hm-border: #273438;
+  --hm-border-strong: #3A4C52;
+  --hm-accent: #70D6E8;
+  --hm-accent-hover: #8DE0EE;
+  --hm-accent-subtle: #132B32;
+  --hm-teal: #77B7A5;
+  --hm-cream: #E9D8B4;
+  --hm-success: #4ADE80;
+  --hm-warning: #FBBF24;
+  --hm-danger: #F87171;
+  --hm-radius-sm: 6px;
+  --hm-radius-md: 8px;
+  --hm-radius-lg: 12px;
+  --hm-radius-xl: 16px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080D0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #273438;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A4C52;
+}
+
+/* Selection */
+::selection {
+  background-color: #1A2528;
+  color: #70D6E8;
+}
+
+/* HireMate common focus outline */
+.hm-focus-ring {
+  @apply focus:outline-none focus-visible:ring-1 focus-visible:ring-[#70D6E8] focus-visible:ring-offset-1 focus-visible:ring-offset-[#080D0F];
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

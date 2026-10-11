@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-zerodha" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#151C20" />
+      <stop offset="100%" stop-color="#0A0E10" />
+    </linearGradient>
+    <radialGradient id="glow-zerodha" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="rgba(56, 126, 209, 0.15)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#bg-zerodha)" stroke="#223038" stroke-width="2" />
+  <rect width="640" height="360" rx="24" fill="url(#glow-zerodha)" />
+  <g transform="translate(262, 70)">
+    <svg width="116" height="116" viewBox="0 0 24 24">
+      <path fill="#387ED1" d="M20.378 5.835A27.267 27.267 0 0124 12.169V0H13.666c2.486 1.343 4.763 3.308 6.712 5.835zM5.48 1.297c-1.914 0-3.755.409-5.48 1.166V24h22.944C22.766 11.44 15 1.297 5.48 1.297z" />
+    </svg>
+  </g>
+  <text x="320" y="248" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#F2F0E9" letter-spacing="1">ZERODHA</text>
+</svg>

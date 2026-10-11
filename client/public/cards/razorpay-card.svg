@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-razorpay" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#151C20" />
+      <stop offset="100%" stop-color="#0A0E10" />
+    </linearGradient>
+    <radialGradient id="glow-razorpay" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="rgba(51, 149, 255, 0.15)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#bg-razorpay)" stroke="#223038" stroke-width="2" />
+  <rect width="640" height="360" rx="24" fill="url(#glow-razorpay)" />
+  <g transform="translate(262, 70)">
+    <svg width="116" height="116" viewBox="0 0 24 24">
+      <path fill="#3395FF" d="M22.436 0l-11.91 7.773-1.174 4.276 6.625-4.297L11.65 24h4.391l6.395-24zM14.26 10.098L3.389 17.166 1.564 24h9.008l3.688-13.902Z" />
+    </svg>
+  </g>
+  <text x="320" y="248" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#F2F0E9" letter-spacing="-0.5">Razorpay</text>
+</svg>

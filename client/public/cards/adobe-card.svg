@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-adobe" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#151C20" />
+      <stop offset="100%" stop-color="#0A0E10" />
+    </linearGradient>
+    <radialGradient id="glow-adobe" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="rgba(235, 16, 0, 0.15)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#bg-adobe)" stroke="#223038" stroke-width="2" />
+  <rect width="640" height="360" rx="24" fill="url(#glow-adobe)" />
+  <g transform="translate(265, 72)">
+    <svg width="110" height="110" viewBox="0 0 24 24">
+      <path fill="#FA0F00" d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm15.116 0h-8.884L24 22.624Z" />
+    </svg>
+  </g>
+  <text x="320" y="248" text-anchor="middle" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#F2F0E9" letter-spacing="-0.5">Adobe</text>
+</svg>
